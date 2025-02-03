@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+  <script>
+    // Incorrect way to select and modify content
+    document.getElementById('myDiv').innerHTML = "<p>This is a paragraph.</p>" + "<a href='invalid link'>Click here</a>"; //This will cause a bug in the case of an invalid link
+  </script>
+</body>
+</html>
