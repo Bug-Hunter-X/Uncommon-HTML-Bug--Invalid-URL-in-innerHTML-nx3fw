@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+  <script>
+    //Correct way to use innerHTML with proper validation or DOM manipulation
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = 'This is a paragraph.';
+    const newLink = document.createElement('a');
+    newLink.textContent = 'Click here';
+    newLink.href = 'https://www.example.com'; // Valid URL
+
+    document.getElementById('myDiv').appendChild(newParagraph);
+    document.getElementById('myDiv').appendChild(newLink);
+  </script>
+</body>
+</html>
